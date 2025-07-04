@@ -22,6 +22,10 @@ include device/motorola/sm6475-common/BoardConfigCommon.mk
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := paros
 
+# Partitions
+BOARD_MOT_DP_GROUP_SIZE := 6245623516 # (BOARD_SUPER_PARTITION_SIZE - 4MB)
+BOARD_SUPER_PARTITION_SIZE := 6249817820
+
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
