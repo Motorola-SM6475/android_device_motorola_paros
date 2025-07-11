@@ -65,6 +65,13 @@ PRODUCT_COPY_FILES += \
 # Screen
 TARGET_SCREEN_DENSITY := 400
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.paros
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
 # Shipping API Level
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 34

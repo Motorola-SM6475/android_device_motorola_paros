@@ -27,6 +27,11 @@ on fs
 	#zram wb
         mount_all /vendor/etc/fstab.qcom.zram --early
 
+on post-fs
+    # Sensors
+    chown system system /sys/devices/platform/soc/998000.spi/spi_master/spi0/spi0.0/touchscreen/primary/double_tap_enabled
+    chown system system /sys/devices/platform/soc/998000.spi/spi_master/spi0/spi0.0/touchscreen/primary/double_tap_pressed
+
 on post-fs && property:ro.boot.secure_hardware=0
         write /proc/con_dfpar/con_dfpar_enable 1
 
